@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: nq-dashboard-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: WEBHOOK_SECRET
+        value: nq-dashboard-secret
